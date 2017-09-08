@@ -65,6 +65,9 @@ ul{
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 }
+ul li{
+    vertical-align: text-top;
+}
 footer{
     background: #73c7c1;
     border-radius: 11px;
