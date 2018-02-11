@@ -22,6 +22,7 @@ header{
     font-size: 2em;
 }
 nav{
+    display: flex;
     margin: 15px auto;
 }
 nav li{
@@ -29,6 +30,9 @@ nav li{
     list-style: none;
     margin-left: 0;
     padding: 0;
+}
+nav li:last-child {
+    margin-left: auto;
 }
 .mainMenu a:link, .mainMenu a:visited{
     color: #FAA202;    
