@@ -1,14 +1,4 @@
-/*For Photo page only*/
-.itemSection img{
-    width: 29%;
-    box-shadow: 5px 5px 2px #9b9b9b;
-    margin: 10px 10px;
-}
-p{
-    margin:0.2em;
-}
-
-/*Defaul style from main.css*/
+/*Defaul style*/
 img, video{
     max-width: 100%;
 }
@@ -92,9 +82,11 @@ footer{
     width: 100%;
 }
 .itemSection{
+    flex: auto;
     width: 100%;
 }
 .itemAside{
+    flex: auto;
     margin: 0.3em 0em;
     width: 100%;
 }
@@ -113,7 +105,7 @@ footer{
         width: 100%;
     }
     header{
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     main{
         margin: 10px auto 10px auto;
@@ -142,13 +134,13 @@ footer{
 }
 @media screen and (min-width: 960px){
     aside{
-        border-top: solid 2px #d3d3d3;
+        border-left: solid 2px #d3d3d3;
     }
     article.container{
-        width: 100%;
+        width: 65%;
     }
     aside.container{
-        width: 100%;
+        width: 33%;
     }
     .itemAside{
         width: 100%;
