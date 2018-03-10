@@ -9,31 +9,6 @@
     --min-sectionHeader-size: 1em;
 }
 /*Defaul style*/
-nav {
-    display: flex;
-    margin: 22px auto;
-}
-nav li {
-    float: left;
-    list-style: none;
-    margin-left: 0;
-    padding: 0;
-}
-.mainMenu a:link, .mainMenu a:visited{
-    color: #FAA202;    
-    display: block;
-    margin-bottom: 0;
-    padding: 0.3em 0.3em;
-    text-align: center;
-    width: 5em;
-}
-.mainMenu a:hover, .mainMenu a:active {
-    background-color: #fff35d;
-}
-.iconMenu, .contactLogo{
-    width: 48px;
-    height: 48px;
-}
 img, video {
     max-width: 100%;
 }
@@ -56,9 +31,30 @@ section {
     padding: 0.22em 0.88em;
     box-shadow: 8px 8px 2px #e7e7e7;
 }
+section:hover {
+    border: solid green;
+    background: rgb(221, 255, 153);
+}
 .sectionHeader {
     color: var(--header-color);
 }
+/*Just declare the grid-area*/
+#teaching {
+    grid-area: teaching;
+}
+#research {
+    grid-area: research;
+}
+#fun {
+    grid-area: fun;
+}
+#me {
+    grid-area: me;
+}
+#contact {
+    grid-area: contact;
+}
+/*CSS for footer*/
 footer {
     grid-area: footer;
     background: #73c7c1;
@@ -74,80 +70,89 @@ footer {
 @media screen and (max-width: 359px) {
     main {
         display: grid;
+        grid-template-areas: 
+            "teaching"
+            "research"
+            "books"
+            "photos"
+            "me"
+            "contact";
         grid-gap: 1.2em;
         margin: 10px auto 10px auto;
     }
-    section {
-        display: grid;
-        grid-gap: 1em;
-    }
     header {
         font-size: var(--min-title-size);
     }
     .sectionHeader {
-        font-size: var(--min-sectionHeader-size);
-    }
-    .textMenu {
         display: none;
+    }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
     }
 }
 @media screen and (min-width: 360px) and (max-width: 619px){
-    article {
+    main {
         display: grid;
+        grid-template: auto / 2fr 2fr;
+        grid-template-areas:
+            "teaching research"
+            "books photos"
+            "me contact";
         grid-gap: 1.2em;
         margin: 18px auto 18px auto;
-    }
-    section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1em;
     }
     header {
         font-size: var(--min-title-size);
     }
     .sectionHeader {
-        grid-column: span 2;
-        font-size: var(--min-sectionHeader-size);
-    }
-    .textMenu {
         display: none;
+    }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
     }
 }
 @media screen and (min-width: 620px) and (max-width: 959px){
-    article {
+    main {
         display: grid;
+        grid-template: auto / 2fr 2fr;
+        grid-template-areas:
+            "teaching research"
+            "books photos"
+            "me contact";
         grid-gap: 1.5em;
         margin: 22px auto 22px auto;
-    }
-    section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1.2em;
     }
     header {
         font-size: var(--mid-title-size);
     }
     .sectionHeader {
-        grid-column: span 3;
         font-size: var(--mid-sectionHeader-size);
+    }
+    .contactLogo {
+        width: 66px;
+        height: 66px;
     }
 }
 @media screen and (min-width: 960px){
-    article {
+    main {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template: auto / 2fr 2fr 2fr;
+        grid-template-areas:
+            "teaching research me"
+            "books photos contact";
         grid-gap: 1.5em;
-    }
-    section {
-        display: grid;
-        grid-template-columns: repeat(3,2fr);
-        grid-gap: 1.5em;
+        margin: 33px auto 33px auto;
     }
     header {
         font-size: var(--max-title-size);
     }
     .sectionHeader {
-        grid-column: span 3;
         font-size: var(--max-sectionHeader-size);
+    }
+    .contactLogo {
+        width: 88px;
+        height: 88px;
     }
 }

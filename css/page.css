@@ -77,7 +77,7 @@ footer {
         grid-gap: 1.2em;
         margin: 10px auto 10px auto;
     }
-    section {
+    article {
         display: grid;
         grid-gap: 1em;
     }
@@ -92,21 +92,19 @@ footer {
     }
 }
 @media screen and (min-width: 360px) and (max-width: 619px){
-    article {
+    main {
         display: grid;
         grid-gap: 1.2em;
         margin: 18px auto 18px auto;
     }
-    section {
+    article {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         grid-gap: 1em;
     }
     header {
         font-size: var(--min-title-size);
     }
     .sectionHeader {
-        grid-column: span 2;
         font-size: var(--min-sectionHeader-size);
     }
     .textMenu {
@@ -114,40 +112,37 @@ footer {
     }
 }
 @media screen and (min-width: 620px) and (max-width: 959px){
-    article {
+    main {
         display: grid;
         grid-gap: 1.5em;
         margin: 22px auto 22px auto;
     }
-    section {
+    article {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-gap: 1.2em;
     }
     header {
         font-size: var(--mid-title-size);
     }
     .sectionHeader {
-        grid-column: span 3;
         font-size: var(--mid-sectionHeader-size);
     }
 }
 @media screen and (min-width: 960px){
+    main {
+        display: grid;
+        grid-template: auto / 3fr 1.5fr;
+        grid-gap: 1.5em;
+        margin: 33px auto 33px auto;
+    }
     article {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1.5em;
-    }
-    section {
-        display: grid;
-        grid-template-columns: repeat(3,2fr);
         grid-gap: 1.5em;
     }
     header {
         font-size: var(--max-title-size);
     }
     .sectionHeader {
-        grid-column: span 3;
         font-size: var(--max-sectionHeader-size);
     }
 }
