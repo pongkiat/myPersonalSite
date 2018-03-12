@@ -81,8 +81,6 @@ footer {
             "me"
             "contact";
         grid-gap: 1.2em;
-        margin-left: 2em;
-        margin-right: 2em;
     }
     header {
         margin-bottom: 0.6em;
@@ -107,8 +105,6 @@ footer {
             "books photos"
             "me contact";
         grid-gap: 1.2em;
-        margin-left: 2em;
-        margin-right: 2em;
     }
     header {
         margin-bottom: 0.6em;
@@ -129,8 +125,6 @@ footer {
             "teaching research me"
             "books photos contact";
         grid-gap: 1.5em;
-        margin-left: 3em;
-        margin-right: 3em;
     }
     header {
         margin-bottom: 0.8em;
@@ -154,8 +148,6 @@ footer {
             "teaching research me"
             "books photos contact";
         grid-gap: 1.5em;
-        margin-left: 3em;
-        margin-right: 3em;
     }
     header {
         margin-bottom: 1em;
