@@ -46,10 +46,18 @@ body {
     line-height: 1.3em;    
     margin: 20px auto;
     padding: 1em 1em;
-    width: 88%;
 }
 header {
     color: var(--header-color);
+}
+main {
+    display: grid;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+article {
+    display: grid;
+    grid-gap: 1.2em;
 }
 section {
     border: solid #d1d1d1;
@@ -74,13 +82,7 @@ footer {
 /*Responsive design*/
 @media screen and (max-width: 359px) {
     main {
-        display: grid;
         grid-gap: 1.2em;
-        margin: 10px auto 10px auto;
-    }
-    article {
-        display: grid;
-        grid-gap: 1em;
     }
     header {
         font-size: var(--min-title-size);
@@ -97,13 +99,7 @@ footer {
 }
 @media screen and (min-width: 360px) and (max-width: 619px){
     main {
-        display: grid;
         grid-gap: 1.2em;
-        margin: 18px auto 18px auto;
-    }
-    article {
-        display: grid;
-        grid-gap: 1em;
     }
     header {
         font-size: var(--min-title-size);
@@ -120,13 +116,7 @@ footer {
 }
 @media screen and (min-width: 620px) and (max-width: 959px){
     main {
-        display: grid;
         grid-gap: 1.5em;
-        margin: 22px auto 22px auto;
-    }
-    article {
-        display: grid;
-        grid-gap: 1.2em;
     }
     header {
         font-size: var(--mid-title-size);
@@ -140,13 +130,7 @@ footer {
 }
 @media screen and (min-width: 960px){
     main {
-        display: grid;
         grid-template: auto / 3fr 1.5fr;
-        grid-gap: 1.5em;
-        margin: 33px auto 33px auto;
-    }
-    article {
-        display: grid;
         grid-gap: 1.5em;
     }
     header {

@@ -27,6 +27,8 @@ header {
 }
 main {
     display: grid;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 section {
     border: solid #d1d1d1;
