@@ -59,16 +59,17 @@ section {
 .sectionHeader {
     color: var(--header-color);
 }
+/*CSS for footer*/
 footer {
-    grid-area: footer;
-    background: #73c7c1;
-    border-radius: 11px;
+    display: grid;
+    background: rgb(0, 0, 0);
     min-height: 41px;
+    margin-top: 1.5em;
     padding-bottom: 0.2em;
     padding-top: 0.5em;
+    color: white;
     font-size: var(--min-sectionHeader-size);
-    text-align: center;    
-    width: 100%;
+    text-align: center;
 }
 /*Responsive design*/
 @media screen and (max-width: 359px) {
@@ -83,6 +84,9 @@ footer {
     }
     header {
         font-size: var(--min-title-size);
+    }
+    footer {
+        grid-template-rows: 1fr 1fr;
     }
     .sectionHeader {
         font-size: var(--min-sectionHeader-size);
@@ -104,6 +108,9 @@ footer {
     header {
         font-size: var(--min-title-size);
     }
+    footer {
+        grid-template-rows: 1fr 1fr;
+    }    
     .sectionHeader {
         font-size: var(--min-sectionHeader-size);
     }
@@ -124,6 +131,9 @@ footer {
     header {
         font-size: var(--mid-title-size);
     }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }
     .sectionHeader {
         font-size: var(--mid-sectionHeader-size);
     }
@@ -142,6 +152,9 @@ footer {
     header {
         font-size: var(--max-title-size);
     }
+    footer {
+        grid-template-columns: 1fr 2fr;
+    }    
     .sectionHeader {
         font-size: var(--max-sectionHeader-size);
     }
