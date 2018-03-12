@@ -69,7 +69,7 @@ footer {
     text-align: center;
 }
 /*Responsive design*/
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 379px) {
     main {
         grid-template-areas: 
             "teaching"
@@ -97,7 +97,7 @@ footer {
         height: 48px;
     }
 }
-@media screen and (min-width: 360px) and (max-width: 619px){
+@media screen and (min-width: 380px) and (max-width: 619px){
     main {
         grid-template: auto / 2fr 2fr;
         grid-template-areas:
@@ -141,8 +141,8 @@ footer {
         font-size: var(--mid-sectionHeader-size);
     }
     .contactLogo {
-        width: 66px;
-        height: 66px;
+        width: 55px;
+        height: 55px;
     }
 }
 @media screen and (min-width: 960px){
