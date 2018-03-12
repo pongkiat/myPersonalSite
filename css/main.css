@@ -89,7 +89,7 @@ footer {
     footer {
         grid-template-rows: 1fr 1fr;
     }
-    .sectionImg {
+    .sectionHeader {
         display: none;
     }
     .contactLogo {
