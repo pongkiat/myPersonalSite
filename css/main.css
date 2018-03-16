@@ -98,6 +98,10 @@ footer {
         grid-gap: 1.2em;
         margin: 10px auto 10px auto;
     }
+    #articlePhoto {
+        grid-gap: 1.2em;
+        margin: 18px auto 18px auto;
+    }
     .sectionPhoto {
         grid-gap: 1em;
     }
