@@ -9,31 +9,6 @@
     --min-sectionHeader-size: 1em;
 }
 /*Default style*/
-nav {
-    display: flex;
-    margin: 22px auto;
-}
-nav li {
-    float: left;
-    list-style: none;
-    margin-left: 0;
-    padding: 0;
-}
-.mainMenu a:link, .mainMenu a:visited{
-    color: #FAA202;    
-    display: block;
-    margin-bottom: 0;
-    padding: 0.3em 0.3em;
-    text-align: center;
-    width: 5em;
-}
-.mainMenu a:hover, .mainMenu a:active {
-    background-color: #fff35d;
-}
-.iconMenu, .contactLogo{
-    width: 48px;
-    height: 48px;
-}
 img, video {
     max-width: 100%;
 }
@@ -54,17 +29,33 @@ main {
     margin-left: 3em;
     margin-right: 3em;
 }
-article {
-    display: grid;
-    grid-gap: 1.2em;
-}
 section {
     border: solid #d1d1d1;
     padding: 0.22em 0.88em;
     box-shadow: 8px 8px 2px #e7e7e7;
 }
+section:hover {
+    border: solid green;
+    background: rgb(221, 255, 153);
+}
 .sectionHeader {
     color: var(--header-color);
+}
+/*Just declare the grid-area*/
+#teaching {
+    grid-area: teaching;
+}
+#research {
+    grid-area: research;
+}
+#fun {
+    grid-area: fun;
+}
+#me {
+    grid-area: me;
+}
+#contact {
+    grid-area: contact;
 }
 /*CSS for footer*/
 footer {
@@ -79,48 +70,63 @@ footer {
     text-align: center;
 }
 /*Responsive design*/
-@media screen and (max-width: 469px) {
+@media screen and (max-width: 379px) {
     main {
+        grid-template-areas: 
+            "teaching"
+            "research"
+            "books"
+            "photos"
+            "me"
+            "contact";
         grid-gap: 1.2em;
     }
     header {
+        margin-bottom: 0.6em;
         font-size: var(--min-title-size);
     }
     footer {
         grid-template-rows: 1fr 1fr;
     }
-    nav {
-        flex-wrap: wrap;
-    }
     .sectionHeader {
-        font-size: var(--min-sectionHeader-size);
-    }
-    .textMenu {
         display: none;
     }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
+    }
 }
-@media screen and (min-width: 470px) and (max-width: 599px){
+@media screen and (min-width: 380px) and (max-width: 619px){
     main {
+        grid-template: auto / 2fr 2fr;
+        grid-template-areas:
+            "teaching research"
+            "books photos"
+            "me contact";
         grid-gap: 1.2em;
     }
     header {
+        margin-bottom: 0.6em;
         font-size: var(--min-title-size);
     }
     footer {
         grid-template-rows: 1fr 1fr;
-    }    
-    .sectionHeader {
-        font-size: var(--min-sectionHeader-size);
     }
-    .textMenu {
-        display: none;
+    .contactLogo {
+        width: 48px;
+        height: 48px;
     }
 }
-@media screen and (min-width: 600px) and (max-width: 959px){
+@media screen and (min-width: 620px) and (max-width: 959px){
     main {
+        grid-template: auto / 2fr 2fr 2fr;
+        grid-template-areas:
+            "teaching research me"
+            "books photos contact";
         grid-gap: 1.5em;
     }
     header {
+        margin-bottom: 0.8em;
         font-size: var(--mid-title-size);
     }
     footer {
@@ -129,19 +135,31 @@ footer {
     .sectionHeader {
         font-size: var(--mid-sectionHeader-size);
     }
+    .contactLogo {
+        width: 55px;
+        height: 55px;
+    }
 }
 @media screen and (min-width: 960px){
     main {
-        grid-template: auto / 3fr 1.5fr;
+        grid-template: auto / 2fr 2fr 2fr;
+        grid-template-areas:
+            "teaching research me"
+            "books photos contact";
         grid-gap: 1.5em;
     }
     header {
+        margin-bottom: 1em;
         font-size: var(--max-title-size);
     }
     footer {
         grid-template-columns: 1fr 2fr;
-    }    
+    }
     .sectionHeader {
         font-size: var(--max-sectionHeader-size);
+    }
+    .contactLogo {
+        width: 88px;
+        height: 88px;
     }
 }
