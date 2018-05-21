@@ -1,6 +1,6 @@
-carousel();
+slideShow ();
 
-function carousel() {
+function slideShow () {
     `use strict`;
     var photoIndex = 0,
         i,
