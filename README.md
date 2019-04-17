@@ -12,7 +12,3 @@ Source code of my personal site that publish on [https://pongkiat.surge.sh](http
 ### Version 2.0
 
 - CSS Grid layout
-
-### Version 2.1
-
-- Customize to make faster page loading such as using JPEG2000 image format
